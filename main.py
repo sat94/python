@@ -16,6 +16,7 @@ def name():
     while nom=="":
         nom= input("Quel est votre nom? ")
     return nom
+    
 def reponse(nom,age):
     print("Vous vous appelez " + nom + ", vous avez " + str(age1) + " ans")
     print("L'an prochain vous aurez " + str(age+1) + " ans")
