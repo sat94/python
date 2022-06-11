@@ -20,6 +20,18 @@ def name():
 def reponse(nom,age):
     print("Vous vous appelez " + nom + ", vous avez " + str(age1) + " ans")
     print("L'an prochain vous aurez " + str(age+1) + " ans")
+    if age >=60:
+        print("Vous êtes sénior.")
+    elif age==17:
+        print("Vous êtes presque majeur !")
+    elif age==18:
+        print("Vous êtes tous juste majeur") 
+    elif age>=18:
+        print("Vous êtes majeur")
+    elif age<10:
+        print("Vous êtes un enfant !!")
+    else:
+        print("vous êtes mineurs.")
 
 nom1=name()
 age1=demander()
