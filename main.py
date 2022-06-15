@@ -1,38 +1,22 @@
-nom=""
-age=0
-
-def demander():  
-    age_str=0  
-    while age_str==0:
-        age_str = input("Quel est ton age? ")
-        try:
-            age_int = int(age_str)
-        except:
-            print("Erreur: Vous devez taper un nombre pour l'age ")
-    return age_int
-
-def name():
-    nom=""
-    while nom=="":
-        nom= input("Quel est votre nom? ")
-    return nom
-    
-def reponse(nom,age):
-    print("Vous vous appelez " + nom + ", vous avez " + str(age1) + " ans")
-    print("L'an prochain vous aurez " + str(age+1) + " ans")
-    if age >=60:
-        print("Vous êtes sénior.")
-    elif age==17:
-        print("Vous êtes presque majeur !")
-    elif age==18:
-        print("Vous êtes tous juste majeur") 
-    elif age>=18:
-        print("Vous êtes majeur")
-    elif age<10:
-        print("Vous êtes un enfant !!")
+def poserQuestion(titre):
+    question = titre[0]
+    r=titre[1]
+    bonneReponse=titre[2]
+    print()
+    print(f"Question : {question}")
+    print()
+    for i in range(len(r)):
+        print(f"{i+1} - {r[i]}")
+    print()
+    reponse = input(f"Quel est votre réponse ? (entre 1 et {i+1}) ")
+    reponseint = int(reponse)
+    if r[reponseint-1].lower() == bonneReponse.lower():
+        print("Bonne réponse !!")
     else:
-        print("vous êtes mineurs.")
+        print("Mauvaise réponse !! ")
 
-nom1=name()
-age1=demander()
-reponse(nom1,age1)
+question1=("Quel est la capital de France ?",("Bordeaux","Marseille","Paris","Nice"),"paris")
+question2=("Quel est la capital de l'Italie?",("Florntin","Venise","Pise","Rome"), "rome")
+
+poserQuestion(question1)
+poserQuestion(question2)
